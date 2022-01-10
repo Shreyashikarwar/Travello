@@ -1,0 +1,155 @@
+{% extends "basetemp.html" %}
+{% load static %}
+{% block content %}
+
+
+	<!-- About -->
+
+	<br>
+	<br>
+	<br>
+<!-- <div class="home" style="height: 300px;">
+<div class="home_slider_container">
+	<div class="owl-carousel owl-theme home_slider"> -->
+		{% for about in about_data %}
+		<!-- Slide -->
+		<!-- <div class="owl-item">
+			<div class="background_image"
+				style="background-image: url({{about.bgimg.url|safe}})"></div>
+		</div>
+	</div>
+	</div>
+</div> -->
+
+
+	<div class="about" >
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					<div class="section_title"><h2>{{about.title|safe}}</h2></div>
+				</div>
+			</div>
+			<div class="row about_row">
+				<div class="col-lg-6">
+					<div class="about_content">
+						<div class="text_highlight">{{about.details1|safe}}</div>
+						<div class="about_text">
+							<p>{{about.details2|safe}}</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="about_image"><img src="{{about.image.url|safe}}" height="200px" width="520px" alt=""></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% endfor %}
+	<br>
+
+
+
+	<!-- Why Choose Us -->
+	{% for title in choosetitle %}
+	<div class="why">
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{{title.image.url|safe}}" data-speed="0.8"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					<div class="section_title">{{title.title|safe}}</div>
+				</div>
+			</div>
+			<div class="row why_row">
+				{% endfor %}
+				{% for ch in choosedata %}
+				<!-- Why item -->
+				<div class="col-lg-4 why_col">
+					<div class="why_item">
+						<div class="why_image">
+							<!-- <img src="{{ch.image1.url|safe}}"  alt=""> -->
+							<div class="why_icon d-flex flex-column align-items-center justify-content-center">
+								<img src="{{ch.image1.url|safe}}" style="height: 200px; width: 300px;"  alt="">
+							</div>
+						</div>
+						<div class="why_content text-center">
+							<div class="why_title">{{ch.titler1|safe}}</div>
+							<div class="why_text">
+								<p>{{ch.reason1|safe}}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+	
+
+	<!-- Team -->
+{% for t in teamdata %}
+	<div class="team">
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					<div class="section_title">{{ t.title|safe}}</div>
+				</div>
+			</div>
+			<div class="row team_row">
+				
+				<!-- Team Item -->
+				<div class="col-xl-3 col-md-6 team_col">
+					<div class="team_item d-flex flex-column align-items-center justify-content-start text-center">
+						<div class="team_image"><img src="{{t.image1.url|safe}}" alt=""></div>
+						<div class="team_content">
+							<div class="team_title"><a href="#">{{ t.titler1|safe}}</a></div>
+							<div class="team_text">
+								<p>{{ t.reason1|safe}}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Team Item -->
+				<div class="col-xl-3 col-md-6 team_col">
+					<div class="team_item d-flex flex-column align-items-center justify-content-start text-center">
+						<div class="team_image"><img src="{{t.image2.url|safe}}" alt=""></div>
+						<div class="team_content">
+							<div class="team_title"><a href="#">{{ t.titler2|safe}}</a></div>
+							<div class="team_text">
+								<p>{{ t.reason2|safe}}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Team Item -->
+				<div class="col-xl-3 col-md-6 team_col">
+					<div class="team_item d-flex flex-column align-items-center justify-content-start text-center">
+						<div class="team_image"><img src="{{t.image3.url|safe}}" alt=""></div>
+						<div class="team_content">
+							<div class="team_title"><a href="#">{{ t.titler3|safe}}</a></div>
+							<div class="team_text">
+								<p>{{ t.reason3|safe}}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Team Item -->
+				<div class="col-xl-3 col-md-6 team_col">
+					<div class="team_item d-flex flex-column align-items-center justify-content-start text-center">
+						<div class="team_image"><img src="{{t.image3.url|safe}}" alt=""></div>
+						<div class="team_content">
+							<div class="team_title"><a href="#">{{ t.titler3|safe}}</a></div>
+							<div class="team_text">
+								<p>{{ t.reason3|safe}}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+{% endfor %}
+{% endblock content %}

@@ -1,0 +1,52 @@
+{% extends "basetemp.html" %}
+{% load static %}
+{% block content %}
+
+
+{% for x in data %}
+<div class='container-fluid mx-auto mt-5 mb-5 col-12' style="text-align: center">
+    <div class="hd"><h1>Our Services</h1></div>
+    <div class="hd">{{ x.why|safe}}</div>
+    <p><small class="text-muted">{{x.desc|safe}}</small></p>
+    <div class="row" style="justify-content: center">
+        <div class="card col-md-3 col-12">
+            <div class="card-content">
+                <div class="card-body"> <img class="img" width="100%" src="{{ x.image1.url|safe}}" />
+                    <div class="shadow"></div>
+                    <div class="card-title"> {{ x.title1|safe }} </div>
+                    <div class="card-subtitle">
+                        <p> <small class="text-muted">{{x.details1|safe}}</small> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card col-md-3 col-12 ml-2">
+            <div class="card-content">
+                <div class="card-body"> <img class="img"  width="100%" src="{{ x.image2.url|safe}}" />
+                    <div class="card-title"> {{ x.title2|safe }}</div>
+                    <div class="card-subtitle">
+                        <p> <small class="text-muted"> {{x.details2|safe}} </small> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card col-md-3 col-12 ml-2">
+            <div class="card-content">
+                <div class="card-body"> <img class="img rck"  width="100%" src="{{ x.image3.url|safe}}" />
+                    <div class="card-title">  {{ x.title3|safe }} </div>
+                    <div class="card-subtitle">
+                        <p> <small class="text-muted">{{x.details3|safe}}</small> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ft">
+        <p class="chk"><small class="text-muted">Still not sure?</small></p>
+        <div class="btn btn-primary">Read All Testimonials</div>
+    </div>
+</div>
+{% endfor %}
+{% endblock content %}
+
+

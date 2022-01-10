@@ -1,0 +1,129 @@
+{% extends "basetemp.html" %}
+{% load static %}
+{% block content %}
+
+
+
+				<!-- Contact Form -->
+				<section class="vh-100 bg-image" style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');">
+					<div class="mask d-flex align-items-center h-100 gradient-custom-3">
+					  <div class="container h-100">
+						<div class="row d-flex justify-content-center align-items-center h-100">
+						  <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+							<div class="card" style="border-radius: 15px;">
+							  <div class="card-body p-5">
+								<h2 class="text-uppercase text-center mb-5">Contact US</h2>
+				  
+								<form method="post">
+									{% csrf_token %}
+				  
+								  <div class="form-outline mb-4">
+									<input type="text"  name="username"  id="form3Example1cg" class="form-control form-control-lg" />
+									<label class="form-label" for="form3Example1cg">Your Name</label>
+								  </div>
+				  
+								  <div class="form-outline mb-4">
+									<input type="email" name="email" id="form3Example3cg" class="form-control form-control-lg" />
+									<label class="form-label" for="form3Example3cg">Email</label>
+								  </div>
+				  
+								  <div class="form-outline mb-4">
+									<input type="text"  name="subject" id="form3Example4cg" class="form-control form-control-lg" />
+									<label class="form-label" for="form3Example4cg">Subject</label>
+								  </div>
+				  
+								  <div class="form-outline mb-4">
+									<textarea type="text" name="msg"  id="form3Example4cdg" class="form-control form-control-lg"></textarea>
+									<label class="form-label" for="form3Example4cdg">Message</label>
+								  </div>
+				  
+			
+				  
+								  <div class="d-flex justify-content-center">
+									<button type="submit" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">SEND</button>
+								  </div>				  
+								</form>
+									<!-- <div class="contact_content">
+										<div class="contact_title">Get in touch with us</div>
+										<div class="contact_text">
+											<p>Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo. Vivamus massa.Tempor massa et laoreet. Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo. Vivamus massa.</p>
+										</div>
+										<div class="contact_list">
+											<ul>
+												<li>
+													<div>address:</div>
+													<div>1481 Creekside Lane Avila Beach, CA 931</div>
+												</li>
+												<li>
+													<div>phone:</div>
+													<div>+53 345 7953 32453</div>
+												</li>
+												<li>
+													<div>email:</div>
+													<div>yourmail@gmail.com</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+				
+							  </div> -->
+							
+						  </div>
+						</div>
+					  </div>
+					</div>
+				  </section>
+			
+			
+			
+
+
+<!-- 
+				<div class="col-lg-6">
+					<div class="contact_form_container">
+						<form action="" method="post"  id="contact_form" class="contact_form">
+										{% csrf_token %}
+							
+							<div style="margin-bottom: 18px">
+								<input type="text" name="username" class="contact_input contact_input_name inpt" placeholder="Your Name" required="required">
+								<div class="input_border"></div></div>
+							<div class="row">
+								<div class="col-lg-6" style="margin-bottom: 18px">
+									<div>
+										<input type="text" name="email" class="contact_input contact_input_email inpt" placeholder="Your E-mail" required="required">
+										<div class="input_border"></div></div>
+								</div>
+								<div class="col-lg-6" style="margin-bottom: 18px">
+									<div>
+										<input type="text" name="subject" class="contact_input contact_input_subject inpt" placeholder="Subject" required="required">
+										<div class="input_border">
+
+									</div>
+									</div>
+								</div>
+							</div>
+							<div>
+								<textarea name="msg" class="contact_textarea contact_input inpt" placeholder="Message" required="required"></textarea>
+								<div class="input_border" style="bottom:3px"></div></div>
+							<button class="contact_button" type="submit">Send</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+ -->
+	<!-- Map -->
+
+	<!-- <div class="contact_map">
+		 Google Map
+		<div class="map">
+			<div id="google_map" class="google_map">
+				<div class="map_container">
+					<div id="map"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</section> -->
+	{% endblock content %}
